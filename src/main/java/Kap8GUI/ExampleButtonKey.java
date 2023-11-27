@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+
 public class ExampleButtonKey {
     public static void main(String[] args){
         JFrame frame = new JFrame("Example");
@@ -22,7 +23,13 @@ public class ExampleButtonKey {
         dialogPanel.add(label);
         dialog.add(dialogPanel);
 
-        button.addActionListener(e -> dialog.setVisible(true));
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void
+            actionPerformed(ActionEvent e) {
+                dialog.setVisible(true);
+            }
+        });
 
         Action closeAction = new AbstractAction() {
             @Override
@@ -34,6 +41,7 @@ public class ExampleButtonKey {
         panel.getInputMap().put(KeyStroke.getKeyStroke((char) KeyEvent.VK_ESCAPE), "EscapeEvent");
         panel.getActionMap().put("EscapeEvent", closeAction);
 
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 }
