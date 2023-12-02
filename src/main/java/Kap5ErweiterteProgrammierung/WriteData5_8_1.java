@@ -2,7 +2,7 @@ package Kap5ErweiterteProgrammierung;
 
 import java.io.*;
 
-public class WriteData {
+public class WriteData5_8_1 {
     public static void main(String[] args){
         try{
             //path may vary on your PC

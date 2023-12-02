@@ -2,7 +2,7 @@ package Kap5ErweiterteProgrammierung;
 
 import java.io.*;
 
-public class ReadData {
+public class ReadData5_8_2 {
     public static void main(String[] args){
         try {
             //path may vary on your PC

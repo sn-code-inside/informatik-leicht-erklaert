@@ -1,6 +1,6 @@
 package Kap5ErweiterteProgrammierung;
 
-public class RecursionIteration {
+public class Recursion5_5 {
 
     public static void main(String[] args) {
         int number = 4;
