@@ -2,6 +2,7 @@ package Kap5ErweiterteProgrammierung;
 
 public class JavaErrors5_9 {
     public static void main(String[] args) {
+        compilerError();
         runTimeError();
     }
 
