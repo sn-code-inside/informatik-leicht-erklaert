@@ -6,5 +6,5 @@ that needs this kind of method
  */
 public interface Learning {
 
-    public abstract void study();
+    void study();
 }

@@ -6,6 +6,6 @@ that needs this kind of method
  */
 public interface GoToSchool {
 
-    public abstract void goToSchool();
+    void goToSchool();
 
 }

@@ -6,5 +6,5 @@ that needs this kind of method
  */
 public interface Teaching {
 
-    public abstract void teach();
+    void teach();
 }
