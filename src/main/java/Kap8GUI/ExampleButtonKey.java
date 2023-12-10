@@ -12,7 +12,7 @@ public class ExampleButtonKey {
         JPanel panel = new JPanel();
         JButton button = new JButton("Click me!");
         JDialog dialog = new JDialog();
-        JLabel label = new JLabel("You clicked the button.");
+        JLabel label = new JLabel("Press ESC to close!");
         JPanel dialogPanel = new JPanel();
 
         panel.add(button);
@@ -34,12 +34,13 @@ public class ExampleButtonKey {
         Action closeAction = new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
                 frame.dispose();
             }
         };
 
-        panel.getInputMap().put(KeyStroke.getKeyStroke((char) KeyEvent.VK_ESCAPE), "EscapeEvent");
-        panel.getActionMap().put("EscapeEvent", closeAction);
+        dialogPanel.getInputMap().put(KeyStroke.getKeyStroke((char) KeyEvent.VK_ESCAPE), "EscapeEvent");
+        dialogPanel.getActionMap().put("EscapeEvent", closeAction);
 
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);

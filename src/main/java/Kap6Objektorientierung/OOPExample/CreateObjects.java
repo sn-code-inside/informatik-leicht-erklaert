@@ -22,7 +22,7 @@ public class CreateObjects {
         System.out.println("Tobi is " + studentTobi.age + " after his birthday");
 
         teacherJim.goToSchool();
-        teacherJim.goToSchool(teacherJim.name);
+
 
         teacherJim.teach();
 
